@@ -1,5 +1,6 @@
-package com.in28minutes.springboot.learnjpaandhibernate.course;
+package com.in28minutes.springboot.learnjpaandhibernate.course.springdatajpa;
 
+import com.in28minutes.springboot.learnjpaandhibernate.course.Course;
 import com.in28minutes.springboot.learnjpaandhibernate.course.springdatajpa.CourseSpringDataJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -26,5 +27,8 @@ public class CourseSpringDataJpaCommandLineRunner implements CommandLineRunner {
 
       System.out.println("Spring Data JPA: " + repository.findById(1l));
       System.out.println("Spring Data JPA: " + repository.findById(3l));
+
+      System.out.println(repository.findAll());
+      System.out.println("Searching by author: " + repository.findByAuthor("in28minutes"));
   }
 }

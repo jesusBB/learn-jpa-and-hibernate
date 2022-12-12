@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.learnjpaandhibernate.course.springdatajpa;
+package com.in28minutes.springboot.learnjpaandhibernate.course;
 
 import com.in28minutes.springboot.learnjpaandhibernate.course.Course;
 import com.in28minutes.springboot.learnjpaandhibernate.course.jpa.CourseJpaRepository;
@@ -27,5 +27,7 @@ public class CourseCommandLineRunner implements CommandLineRunner {
 
       System.out.println(repository.findById(1l));
       System.out.println(repository.findById(3l));
+
+      System.out.println();
   }
 }
