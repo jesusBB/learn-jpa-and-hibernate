@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.learnjpaandhibernate.course;
+package com.in28minutes.springboot.learnjpaandhibernate.course.springdatajpa;
 
 import com.in28minutes.springboot.learnjpaandhibernate.course.Course;
 import com.in28minutes.springboot.learnjpaandhibernate.course.jpa.CourseJpaRepository;
@@ -15,14 +15,17 @@ public class CourseCommandLineRunner implements CommandLineRunner {
   @Autowired
   private CourseJpaRepository repository;
 
+  //@Autowired
+  //private CourseSpringDataJpaRepository repository;
+
   @Override
   public void run(String... args) throws Exception {
       repository.insert(new Course(1, "Learn AWS!", "in28minutes"));
       repository.insert(new Course(2, "Learn AWS 22!", "in28minutes"));
       repository.insert(new Course(3, "Learn AWS 333!", "in28minutes"));
-      repository.deleteById(2);
+      repository.deleteById(2l);
 
-      System.out.println(repository.findById(1));
-      System.out.println(repository.findById(3));
+      System.out.println(repository.findById(1l));
+      System.out.println(repository.findById(3l));
   }
 }
