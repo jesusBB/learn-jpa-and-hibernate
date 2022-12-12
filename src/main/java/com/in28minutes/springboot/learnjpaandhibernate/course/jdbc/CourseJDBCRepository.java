@@ -27,7 +27,7 @@ public class CourseJDBCRepository {
       jdbcTemplate.update(INSERT_QUERY, course.getId(), course.getName(), course.getAuthor());
     }
 
-    public void delete(long id){
+    public void deleteById(long id){
         jdbcTemplate.update(DELETE_QUERY, id);
     }
 
